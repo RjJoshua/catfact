@@ -1,0 +1,21 @@
+﻿@page
+@model IndexModel
+
+<div class="text-center">
+    @{
+        if (Model.DataResult != null)
+        {
+            @foreach (var fact in Model.DataResult.Data)
+            {
+                <h1 class="display-4">@fact.Fact</h1>
+                <p>Length: @fact.Length</p>
+                <hr />
+            }
+        }
+        else
+        {
+            <h2>No data</h2>
+        }
+    }
+    <p>Learn about <a href="https://catfact.ninja/facts">building Web apps with ASP.NET Core</a>.</p>
+</div>
